@@ -17,3 +17,20 @@ margin: 0 auto;
     line-height: 22px;   
     color: #545454;
 }
+
+@media screen and (max-width: 320px) {
+.footer {
+max-width: 90%;
+}
+
+.footer__text {
+max-width: 100%;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+
+}
+
+}

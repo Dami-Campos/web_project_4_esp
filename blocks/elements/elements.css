@@ -57,14 +57,16 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 align-items: center;
+grid-gap: 20px;
 }
         
 .element {
 max-width: 100%;
+margin: 0 auto;
 }
         
 .element__image {
-
+margin: 0 auto;
 }
         
 .element__group {
