@@ -49,6 +49,13 @@ width: 21px;
 height: 19px;
 }
 
+.element__like:hover {
+background-image: url(../images/vector_hover_like.png);
+}
+
+
+
+
 @media screen and (max-width: 320px) {
 .elements {
 max-width: 90%;
