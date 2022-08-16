@@ -160,6 +160,10 @@
     margin-left: 10px;
     }
 
+    .profile__rectangle:hover {
+    opacity: 1;
+    }
+
    .profile__button {
     max-width: 18px;
     height: 18px;
