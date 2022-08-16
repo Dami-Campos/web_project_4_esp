@@ -8,13 +8,17 @@ z-index: 2;
 }
 
 .popup__close {
- height: 40px;
+height: 40px;
 width: 40px;
 position: absolute;
-right: 690px;
+left: 850px;
 top: 160px;
- background: none;
+background: none;
 border: none;
+}
+
+.popup__close:hover {
+opacity: 0.5;
 }
     
 .popup__container {
@@ -54,14 +58,9 @@ width: 358px;
 border-style: none none solid;
 }
 
-.popup__about {
+.popup__job {
 width: 358px;
 border-style: none none solid;
-}
-
-
-.popup__close:hover {
-opacity: 0.5;
 }
 
 .popup__save {
@@ -126,7 +125,7 @@ max-width: 238px;
 border-style: none none solid;
 }
         
-.popup__about {
+.popup__job {
 max-width: 238px;
 border-style: none none solid;
 }
