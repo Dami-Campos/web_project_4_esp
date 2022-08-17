@@ -3,8 +3,8 @@
     min-width: 320px;
     margin: 0 auto;
     margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     }
     
     .profile__avatar {
@@ -21,7 +21,7 @@
     
     .profile__info {
     width: 415px;
-    margin-left: -130px;
+    margin-left: 50px;
     }
     
      .profile__name-rectangle {
@@ -29,6 +29,7 @@
     margin-bottom: -15px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
      }
     
     .profile__name {
@@ -63,6 +64,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         }
 
         .profile__rectangle:hover {

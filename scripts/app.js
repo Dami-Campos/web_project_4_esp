@@ -41,11 +41,15 @@ function handleProfileFormSubmit(evt) {
     let jobInput = document.querySelector("#job")
 
     // Obtén los valores de cada campo desde la propiedad de valor correspondiente
+    
 
     // Selecciona los elementos donde se introducirán los valores de los campos
 
     // Inserta nuevos valores utilizando el textContent
     // propiedad del método querySelector()
+    document.querySelector('.profile__name').textContent = nameInput.value;
+    document.querySelector(".profile__explorador").textContent = jobInput.value;
+    closePopup();
 }
 
 // Conecta el manipulador (handler) al formulario:
