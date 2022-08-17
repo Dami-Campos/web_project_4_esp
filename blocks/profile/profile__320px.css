@@ -1,0 +1,96 @@
+@media screen and (max-width: 320px) {
+    .profile {
+    max-width: 85%;
+    height: 286px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-gap: 40px;
+    margin-bottom: 66px;
+    }
+            
+    .profile__avatar {
+    max-width: 120px;
+    height: 120px;
+    margin-top: 0;
+    margin: 0 auto;
+    }
+            
+    .profile__avatar-image {
+    margin-top: 0;
+    }
+            
+    .profile__info {
+    max-width: 100%;
+    margin: 0 auto;
+    }
+            
+    .profile__name-rectangle {
+    max-width: 224px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    }
+            
+    .profile__name {
+        width: 196px;
+        height: 22px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;  
+        margin: 0 auto;
+    }
+            
+    .profile__rectangle {
+    max-width: 18px;
+    height: 18px; 
+    margin: 0 auto;
+    margin-left: 10px;
+    }
+
+    .profile__rectangle:hover {
+    opacity: 1;
+    }
+
+   .profile__button {
+    max-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+   }
+
+    .profile__button-image {
+    max-width: 7.5px;
+    height: 7.5px;
+    }
+            
+    .profile__explorador {
+    max-width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 14px;
+    }
+            
+    .profile__add {
+     min-width: 90%; 
+     margin: 0 auto;    
+    height: 50px;
+    margin-top: 36px;
+    }
+            
+    .profile__vector {
+    max-width: 16px;     
+    height: 16px;      
+    }
+             
+    }

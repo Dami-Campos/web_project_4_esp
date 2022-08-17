@@ -1,0 +1,8 @@
+.element__like {
+    width: 21px;
+    height: 19px;
+    }
+    
+    .element__like:hover {
+    background-image: url(../images/vector_hover_like.png);
+    }
