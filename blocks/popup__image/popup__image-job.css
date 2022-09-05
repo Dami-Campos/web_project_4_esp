@@ -1,5 +1,7 @@
-.popup__job {
+.popup__image-job {
     width: 358px;
     border-style: none none solid;
+    position: relative;
+    z-index: 5;
     }
     

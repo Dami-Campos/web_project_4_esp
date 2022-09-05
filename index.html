@@ -8,14 +8,25 @@
   <title>Al rededor de los EEUU</title>
 </head>
 <body class="page">
-  <section id="popup" class="popup">
-    <div class="popup__close"><button class="popup__close-button" type="button" id="close"><img src="./images/close_icon.png" alt="Cerrar página"></button></div>
-    <div class="popup__container">
-      <h3 class="popup__header">Editar perfil</h3>
-      <form id="form" class="popup__form" name="register">
-      <input id="name" class="popup__name" type="text" name="Nombre" placeholder="Nombre">
-      <input id="job" class="popup__job" type="text" name="Acerca de mi" placeholder="Acerca de mi">
-      <button class="popup__save" type="submit">Guardar</button>
+  <section id="popupProfile" class="popup__profile">
+    <div class="popup__profile-close"><button class="popup__profile-closebutton" type="button" id="closeProfile"><img src="./images/close_icon.png" alt="Cerrar página"></button></div>
+    <div class="popup__profile-container">
+      <h3 class="popup__profile-header">Editar perfil</h3>
+      <form id="formProfile" class="popup__profile-form" name="register">
+      <input id="nameProfile" class="popup__profile-name" type="text" name="Nombre" placeholder="Nombre">
+      <input id="jobProfile" class="popup__profile-job" type="text" name="Acerca de mi" placeholder="Acerca de mi">
+      <button class="popup__profile-save" type="submit">Guardar</button>
+      </form>
+      </div> 
+  </section>
+  <section id="popupImage" class="popup__image">
+    <div class="popup__image-close"><button class="popup__profile-closebutton" type="button" id="closeImage"><img src="./images/close_icon.png" alt="Cerrar página"></button></div>
+    <div class="popup__image-container">
+      <h3 class="popup__image-header">Editar perfil</h3>
+      <form id="formImage" class="popup__image-form" name="register">
+      <input id="titleImage" class="popup__image-name" type="text" name="Título" placeholder="Título">
+      <input id="image" class="popup__image-job" type="text" name="Enlace de la imagen" placeholder="Enlace de la imagen">
+      <button class="popup__image-save" type="submit">Crear</button>
       </form>
       </div> 
   </section>
@@ -31,57 +42,63 @@
     <div class="profile__name-rectangle">
     <h1 class="profile__name">Jacques Cousteau</h1>
     <div class="profile__rectangle">
-    <a id="open" href="#"><button type="button" class="profile__button"><img class="profile__button-image" src="./images/main__symbol.png" alt="linea diagonal"></button></a>
+    <a id="openProfile" href="#"><button type="button" class="profile__button"><img class="profile__button-image" src="./images/main__symbol.png" alt="linea diagonal"></button></a>
     </div>
     </div>
     <h2 class="profile__explorador">Explorador</h2>
     </div>
-    <div class="profile__add">
+    <div id="openImage" class="profile__add">
     <img class="profile__vector" src="./images/main__vector.png" alt="diminuta cruz">
     </div>
   </section>
   <section class="elements">
     <div class="element">
-    <img class="element__image" src="./images/element_yosemite.jpg" alt="">
-    <div class="element__group">
-    <div class="element__name">Valle de Yosemite</div>
-    <img class="element__like" src="./images/vector_like.png" alt="corazón">
+     <img class="element__trash"  src="images/Trash.png" alt="Bote de basura">
+     <img class="element__image" src="./images/element_yosemite.jpg" alt="">
+     <div class="element__group">
+     <div class="element__name">Valle de Yosemite</div>
+     <img class="element__like" src="./images/vector_like.png" alt="corazón">
+     </div>
+    </div>
+    <div class="element">
+     <img class="element__trash"  src="images/Trash.png" alt="Bote de basura">
+     <img class="element__image" src="./images/element_lago.png" alt="">
+     <div class="element__group">
+     <div class="element__name">Lago Louise</div>
+     <img class="element__like" src="./images/vector_like.png" alt="corazón">
+     </div>
+    </div>
+    <div class="element">
+     <img class="element__trash"  src="images/Trash.png" alt="Bote de basura">
+     <img class="element__image" src="./images/element_montañas.png" alt="">
+     <div class="element__group">
+     <div class="element__name">Montañas Calvas</div>
+     <img id="elementLike" class="element__like" src="./images/vector_like.png" alt="corazón">
+     </div>
+    </div>
+    <div class="element">
+     <img class="element__trash"  src="images/Trash.png" alt="Bote de basura">
+     <img class="element__image" src="./images/element_latemar.png" alt="">
+     <div class="element__group">
+     <div class="element__name">Latemar</div>
+     <img class="element__like" src="./images/vector_like.png" alt="corazón">
     </div>
     </div>
     <div class="element">
-    <img class="element__image" src="./images/element_lago.png" alt="">
-    <div class="element__group">
-    <div class="element__name">Lago Louise</div>
-    <img class=".element__like" src="./images/vector_like.png" alt="corazón">
+     <img class="element__trash"  src="images/Trash.png" alt="Bote de basura">
+     <img class="element__image" src="./images/element_vanoise.png" alt="">
+     <div class="element__group">
+     <div class="element__name">Vanoise Nationa...</div>
+     <img class="element__like" src="./images/vector_like.png" alt="corazón">
     </div>
     </div>
     <div class="element">
-    <img class="element__image" src="./images/element_montañas.png" alt="">
-    <div class="element__group">
-    <div class="element__name">Montañas Calvas</div>
-    <img class="element__like" src="./images/vector_like.png" alt="corazón">
-    </div>
-    </div>
-    <div class="element">
-    <img class="element__image" src="./images/element_latemar.png" alt="">
-    <div class="element__group">
-    <div class="element__name">Latemar</div>
-    <img class="element__like" src="./images/vector_like.png" alt="corazón">
-    </div>
-    </div>
-    <div class="element">
-    <img class="element__image" src="./images/element_vanoise.png" alt="">
-    <div class="element__group">
-    <div class="element__name">Vanoise Nationa...</div>
-    <img class="element__like" src="./images/vector_like.png" alt="corazón">
-    </div>
-    </div>
-    <div class="element">
-    <img class="element__image" src="./images/element_braies.png" alt="">
-    <div class="element__group">
-    <div class="element__name">Lago di Braies</div>
-    <img class="element__like" src="./images/vector_like.png" alt="corazón">
-    </div>
+     <img class="element__trash"  src="images/Trash.png" alt="Bote de basura">
+     <img class="element__image" src="./images/element_braies.png" alt="">
+     <div class="element__group">
+     <div class="element__name">Lago di Braies</div>
+     <img class="element__like" src="./images/vector_like.png" alt="corazón">
+     </div>
     </div>
   </section>
   <footer class="footer">

@@ -1,57 +1,83 @@
-let open = 
-document.querySelector("#open");
-let close = 
-document.querySelector("#close");
-let popup = 
-document.querySelector("#popup");
-let nameInput = 
-document.querySelector("#name");
-let jobInput = 
-document.querySelector("#job");
+const openProfile = 
+document.querySelector("#openProfile");
+const closeProfile = 
+document.querySelector("#closeProfile");
+const popupProfile = 
+document.querySelector("#popupProfile");
+const nameInputProfile = 
+document.querySelector("#nameProfile");
+const jobInputProfile = 
+document.querySelector("#jobProfile");
 
-function showPopup() {
-document.getElementById("popup").style.display = "block";
+function showPopupProfile() {
+document.getElementById("popupProfile").style.display = "block";
 }
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
+function closePopupProfile() {
+    document.getElementById("popupProfile").style.display = "none";
     }
     
-open.addEventListener("click", showPopup); 
-close.addEventListener("click", closePopup);
+openProfile.addEventListener("click", showPopupProfile); 
+closeProfile.addEventListener("click", closePopupProfile);
 
+let formProfile = document.querySelector("#formProfile")
 
-// Busquemos el formulario en el DOM
-let formElement = document.querySelector("#form")
-
-// Lo siguiente es el manipulador (handler) de entrega de formularios, aunque
-// no se enviará en ningún sitio todavía
-
-// Observa que el nombre de la función comienza con un verbo
-// y describe exactamente lo que hace la función
 function handleProfileFormSubmit(evt) {
-    // Esta línea impide que el navegador
-    // entregue el formulario en su forma predeterminada.
     evt.preventDefault();
-    // Una vez hecho esto, podemos definir nuestra propia forma de entregar el formulario.
-    // Lo explicaremos todo con más detalle después.
+    let nameInput = document.querySelector("#nameProfile")
+    let jobInput = document.querySelector("#jobProfile")
 
-    // Busquemos los campos del formulario en el DOM
-    let nameInput = document.querySelector("#name")
-    let jobInput = document.querySelector("#job")
-
-    // Obtén los valores de cada campo desde la propiedad de valor correspondiente
-    
-
-    // Selecciona los elementos donde se introducirán los valores de los campos
-
-    // Inserta nuevos valores utilizando el textContent
-    // propiedad del método querySelector()
     document.querySelector('.profile__name').textContent = nameInput.value;
     document.querySelector(".profile__explorador").textContent = jobInput.value;
-    closePopup();
+    closePopupProfile();
 }
 
-// Conecta el manipulador (handler) al formulario:
-// se observará el evento de entrega
-formElement.addEventListener('submit', handleProfileFormSubmit);
+formProfile.addEventListener('submit', handleProfileFormSubmit);
+
+
+
+const openImage = 
+document.querySelector("#openImage");
+const closeImage = 
+document.querySelector("#closeImage");
+const popupImage = 
+document.querySelector("#popupImage");
+const titleInput = 
+document.querySelector("#titleImage");
+const imageInput = 
+document.querySelector("#image");
+
+function showPopupImage() {
+document.getElementById("popupImage").style.display = "block";
+}
+
+function closePopupImage() {
+    document.getElementById("popupImage").style.display = "none";
+    }
+    
+openImage.addEventListener("click", showPopupImage); 
+closeImage.addEventListener("click", closePopupImage);
+
+let formImage = document.querySelector("#formImage")
+
+function handleImageFormSubmit(evt) {
+    evt.preventDefault();
+    let titleInput = document.querySelector("#titleImage")
+    let imageInput = document.querySelector("#image")
+
+    document.querySelector('.element__name').textContent = titleInput.value;
+    document.querySelector(".element__image").src = imageInput.value;
+    closePopupImage();
+}
+
+formImage.addEventListener('submit', handleImageFormSubmit);
+
+
+
+function elementLikeFunction (evt);{
+evt.preventDefault();
+let elementLike = document.querySelector("#elementLike")
+document.querySelector(".element__like").src = /images/vector_like_hover.png;
+}
+elementLike.addEventListener("click", elementLikeFunction);
+

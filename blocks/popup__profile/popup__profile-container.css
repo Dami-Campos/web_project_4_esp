@@ -1,4 +1,4 @@
-.popup__container {
+.popup__profile-container {
     max-width: 430px;
     height: 330px;
     margin: 0 auto;
@@ -10,4 +10,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    z-index: 5;
     }

@@ -1,11 +1,11 @@
-.popup__close-button {
+.popup__image-closebutton {
     height: 40px;
-    width: 40px;
+    max-width: 40px;
     background: none;
     border: none;
     }
 
-.popup__close-button:hover {
+.popup__image-closebutton:hover {
     opacity: 0.5;
 }
             

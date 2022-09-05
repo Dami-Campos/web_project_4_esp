@@ -1,6 +1,6 @@
-.popup__close {
+.popup__image-close {
     height: 50px;
-    width: 490px;
+    max-width: 490px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;

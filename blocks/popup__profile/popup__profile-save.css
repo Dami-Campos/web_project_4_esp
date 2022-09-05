@@ -1,10 +1,10 @@
-.popup__save {
+.popup__profile-save {
     width: 358px;
     height: 50px;
     background-color: black;
     color: white;
 }
 
-.popup__save:hover {
+.popup__profile-save:hover {
     opacity: 0.8;
 }
