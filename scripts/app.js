@@ -72,12 +72,49 @@ function handleImageFormSubmit(evt) {
 
 formImage.addEventListener('submit', handleImageFormSubmit);
 
+const initialCards = [
+    {
+      name: "Valle de Yosemite",
+      link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
+    },
+    {
+      name: "Lago Louise",
+      link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
+    },
+    {
+      name: "Montañas Calvas",
+      link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
+    },
+    {
+      name: "Latemar",
+      link: "https://code.s3.yandex.net/web-code/latemar.jpg"
+    },
+    {
+      name: "Parque Nacional de la Vanoise",
+      link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
+    },
+    {
+      name: "Lago di Braies",
+      link: "https://code.s3.yandex.net/web-code/lago.jpg"
+    }
+  ]; 
 
 
-function elementLikeFunction (evt);{
-evt.preventDefault();
-let elementLike = document.querySelector("#elementLike")
-document.querySelector(".element__like").src = /images/vector_like_hover.png;
-}
-elementLike.addEventListener("click", elementLikeFunction);
+  function createCard(initialCards) {
+    const elementTemplate = document.querySelector("#template").content;
+    const element = elementTemplate.querySelector('.element').cloneNode(true);
+    element.querySelector(".element__image").src = initialCards.link;
+    element.querySelector(".element__name").textContent = initialCards.name;
+    return element;
+  }
+
+  const cardsContainer = document.querySelector('.elements');
+  
+
+
+initialCards.forEach((card) => {
+  const cardElement = createCard(card);
+  cardsContainer.prepend(cardElement);
+});
+
 
