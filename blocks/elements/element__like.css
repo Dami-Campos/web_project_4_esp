@@ -1,10 +1,14 @@
 .element__like {
     width: 21px;
     height: 19px;
+    background: none;
+    border: 0;
+    color: inherit;
+    background-image: url("/images/vector_like.png");
     }
     
     .element__like:hover {
-    background-image: url(/images/vector_like_hover.png);
+    opacity: 0.6;
     width: 21px;
     height: 19px;
     }

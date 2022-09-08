@@ -118,3 +118,38 @@ initialCards.forEach((card) => {
 });
 
 
+
+const likes = document.querySelectorAll(".element__like");
+const liked = document.querySelectorAll(".element__liked");
+
+
+likes.forEach(function(like) {
+like.addEventListener("click", (event) => {
+event.target.classList.toggle("element__liked");
+});
+});
+
+
+
+
+
+const trash = document.querySelectorAll(".element__trash"); 
+
+trash.forEach(function(item) {
+  item.addEventListener("click", (event) => {
+  const listItem = event.target.closest(".element");
+   listItem.remove();
+  } );
+ });
+
+const openPopup = querySelectorAll(".element__images");
+const closePopupp = querySelector(".popup__close-button");
+const popupElement = querySelector(".popup");
+
+openPopup.forEach(image =>{
+image.addEventListener("click", () => {
+document.getElementById("popupElement").style.display = "block";
+popupElement.querySelector(".popup__size-image").src = openPopup.getAtributte("src");
+})
+});
+
