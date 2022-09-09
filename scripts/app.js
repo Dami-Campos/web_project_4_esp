@@ -142,14 +142,27 @@ trash.forEach(function(item) {
   } );
  });
 
-const openPopup = querySelectorAll(".element__images");
-const closePopupp = querySelector(".popup__close-button");
-const popupElement = querySelector(".popup");
 
-openPopup.forEach(image =>{
-image.addEventListener("click", () => {
-document.getElementById("popupElement").style.display = "block";
-popupElement.querySelector(".popup__size-image").src = openPopup.getAtributte("src");
-})
+
+const openPopup = document.querySelectorAll(".element__image"); //estabas buscando .element__images o algo así pero en tu html solo metes element checa eso
+const closePopupp = document.querySelector(".popup__close-button"); // no estabas poniendo el document para la funcion de queryselector
+const popupElement = document.querySelector(".popup");
+
+openPopup.forEach(image => {
+    image.addEventListener("click", (event) => {
+        const parent = event.target.closest('.element'); //cuando se da click en alguna parte del card tienes que buscar al papá para que a partir de el localices la imagen 
+        if(parent){
+            const image = parent.querySelector('.element__image');
+            const name = parent.querySelector('.element__name');
+            popupElement.querySelector(".popup__size-image").src = image.src;
+            popupElement.querySelector(".popup__footer").textContent = name.textContent;
+            popupElement.style.display = 'block'; // aca es mejor tener un modificador y agregarlo al popup para que se vea
+        }
+        function closePopup () {
+          popupElement.style.display= "none"; 
+          }
+          
+          closePopupp.addEventListener("click", closePopup);
+    })
 });
 
