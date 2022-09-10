@@ -1,20 +1,20 @@
 @media screen and (max-width: 495px) {
 
-    .popup__image {
+    .popupimage {
   width: 100%;
     }  
   
-    .popup__image-close {
+    .popupimage__close {
     max-width: 80%;
     }
   
-  .popup__image-closebutton {
+  .popupimage__closebutton {
   max-width: 26px;
   height: 26px;
   margin-left: 10px;
   }
               
-  .popup__image-container {
+  .popupimage__container {
   max-width: 80%;
   height: 322px;
   margin: 0 auto;
@@ -25,7 +25,7 @@
   background-color: white;
   }
           
-  .popup__image-header {
+  .popupimage__header {
   max-width: 238px;
   margin: 0 auto;
   margin-top: 34px;
@@ -36,37 +36,37 @@
   line-height: 22px;
   }
           
-  .popup__image-form {
+  .ppopupimage__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   grid-gap: 45px;
   }
           
-  .popup__image-name {
+  .popupimage__name {
   margin-top: 40px;
   max-width: 238px;
   border-style: none none solid;
   }
           
-  .popup__image-job {
+  .popupimage__job {
   max-width: 238px;
   border-style: none none solid;
   }
           
           
-  .popup__image-closebutton:hover {
+  .popupimage__closebutton:hover {
   opacity: 1;
   }
           
-  .popup__image-save {
+  .popupimage__save {
   max-width: 238px;
   height: 56px;
   background-color: black;
   color: white;
   }
           
-  .popup__image-save:hover {
+  .popupimage__save:hover {
   opacity: 1;
   }
   }

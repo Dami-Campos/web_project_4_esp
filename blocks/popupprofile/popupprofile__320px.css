@@ -1,19 +1,19 @@
 @media screen and (max-width: 495px) {
-  .popup__profile {
+  .popupprofile {
   width: 100%;
     }  
   
-    .popup__profile-close {
+    .popupprofile__close {
     max-width: 80%;
     }
   
-  .popup__profile-closebutton {
+  .popupprofile__closebutton {
   max-width: 26px;
   height: 26px;
   margin-left: 10px;
   }
               
-  .popup__profile-container {
+  .popupprofile__container {
   max-width: 80%;
   height: 322px;
   margin: 0 auto;
@@ -24,7 +24,7 @@
   background-color: white;
   }
           
-  .popup__profile-header {
+  .popupprofile__header {
   max-width: 238px;
   margin: 0 auto;
   margin-top: 34px;
@@ -35,37 +35,37 @@
   line-height: 22px;
   }
           
-  .popup__profile-form {
+  .popupprofile__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   grid-gap: 45px;
   }
           
-  .popup__profile-name {
+  .popupprofile__name {
   margin-top: 40px;
   max-width: 238px;
   border-style: none none solid;
   }
           
-  .popup__profile-job {
+  .popupprofile__job {
   max-width: 238px;
   border-style: none none solid;
   }
           
           
-  .popup__profile-closebutton:hover {
+  .popupprofile__closebutton:hover {
   opacity: 1;
   }
           
-  .popup__profile-save {
+  .popupprofile__save {
   max-width: 238px;
   height: 56px;
   background-color: black;
   color: white;
   }
           
-  .popup__profile-save:hover {
+  .popupprofile__save:hover {
   opacity: 1;
   }
   }
