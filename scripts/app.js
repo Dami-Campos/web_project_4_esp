@@ -58,46 +58,58 @@ function closePopupImage() {
 openImage.addEventListener("click", showPopupImage); 
 closeImage.addEventListener("click", closePopupImage);
 
+
+const initialCards = [
+  {
+    name: "Valle de Yosemite",
+    link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
+  },
+  {
+    name: "Lago Louise",
+    link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
+  },
+  {
+    name: "Montañas Calvas",
+    link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
+  },
+  {
+    name: "Latemar",
+    link: "https://code.s3.yandex.net/web-code/latemar.jpg"
+  },
+  {
+    name: "Parque Nacional de la Vanoise",
+    link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
+  },
+  {
+    name: "Lago di Braies",
+    link: "https://code.s3.yandex.net/web-code/lago.jpg"
+  }
+]; 
+
+function createCard(initialCards) {
+  const elementTemplate = document.querySelector("#template").content;
+  const element = elementTemplate.querySelector('.element').cloneNode(true);
+  element.querySelector(".element__image").src = initialCards.link;
+  element.querySelector(".element__name").textContent = initialCards.name;
+  return element;
+}
+
 let formImage = document.querySelector("#formImage")
 
 function handleImageFormSubmit(evt) {
-    evt.preventDefault();
-    let titleInput = document.querySelector("#titleImage")
-    let imageInput = document.querySelector("#image")
-
-    document.querySelector('.element__name').textContent = titleInput.value;
+  evt.preventDefault();
+    let titleInput = document.querySelector("#titleImage");
+  let imageInput = document.querySelector("#image");
+  document.querySelector('.element__name').textContent = titleInput.value;
     document.querySelector(".element__image").src = imageInput.value;
     closePopupImage();
 }
 
 formImage.addEventListener('submit', handleImageFormSubmit);
 
-const initialCards = [
-    {
-      name: "Valle de Yosemite",
-      link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
-    },
-    {
-      name: "Lago Louise",
-      link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
-    },
-    {
-      name: "Montañas Calvas",
-      link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
-    },
-    {
-      name: "Latemar",
-      link: "https://code.s3.yandex.net/web-code/latemar.jpg"
-    },
-    {
-      name: "Parque Nacional de la Vanoise",
-      link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
-    },
-    {
-      name: "Lago di Braies",
-      link: "https://code.s3.yandex.net/web-code/lago.jpg"
-    }
-  ]; 
+
+
+
 
 
   function createCard(initialCards) {
@@ -144,19 +156,19 @@ trash.forEach(function(item) {
 
 
 
-const openPopup = document.querySelectorAll(".element__image"); //estabas buscando .element__images o algo así pero en tu html solo metes element checa eso
-const closePopupp = document.querySelector(".popup__close-button"); // no estabas poniendo el document para la funcion de queryselector
+const openPopup = document.querySelectorAll(".element__image"); 
+const closePopupp = document.querySelector(".popup__close-button"); 
 const popupElement = document.querySelector(".popup");
 
 openPopup.forEach(image => {
     image.addEventListener("click", (event) => {
-        const parent = event.target.closest('.element'); //cuando se da click en alguna parte del card tienes que buscar al papá para que a partir de el localices la imagen 
+        const parent = event.target.closest('.element'); 
         if(parent){
             const image = parent.querySelector('.element__image');
             const name = parent.querySelector('.element__name');
             popupElement.querySelector(".popup__size-image").src = image.src;
             popupElement.querySelector(".popup__footer").textContent = name.textContent;
-            popupElement.style.display = 'block'; // aca es mejor tener un modificador y agregarlo al popup para que se vea
+            popupElement.style.display = 'block'; 
         }
         function closePopup () {
           popupElement.style.display= "none"; 

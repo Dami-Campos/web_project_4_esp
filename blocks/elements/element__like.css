@@ -1,8 +1,10 @@
 .element__like {
     width: 21px;
     height: 19px;
+    padding-left: 20px;
+    border: none;
     background: none;
-    border: 0;
+    background-repeat: no-repeat;
     color: inherit;
     background-image: url("/images/vector_like.png");
     }

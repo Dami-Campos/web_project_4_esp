@@ -1,5 +1,6 @@
 .element__name {
     margin: 0;
+    padding-left: 20px;
     max-width: 246px;
     font-family: 'Inter';
     font-style: normal;
