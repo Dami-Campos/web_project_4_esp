@@ -94,40 +94,32 @@ function createCard(initialCards) {
   return element;
 }
 
+
+const cardsContainer = document.querySelector('.elements');
+  
+
+ initialCards.forEach((card) => {
+  const cardElement = createCard(card);
+  cardsContainer.prepend(cardElement);
+});
+
+
 let formImage = document.querySelector("#formImage")
 
 function handleImageFormSubmit(evt) {
-  evt.preventDefault();
-    let titleInput = document.querySelector("#titleImage");
-  let imageInput = document.querySelector("#image");
-  document.querySelector('.element__name').textContent = titleInput.value;
-    document.querySelector(".element__image").src = imageInput.value;
-    closePopupImage();
-}
-
+evt.preventDefault();
+let titleInput = document.querySelector("#titleImage");
+let imageInput = document.querySelector("#image");
+document.querySelector('.element__name').textContent = titleInput.value;
+document.querySelector(".element__image").src = imageInput.value;
+const card = createCard(titleInput.value, imageInput.value);
+cardsContainer.replaceWith(card);
+closePopupImage();
+};
 formImage.addEventListener('submit', handleImageFormSubmit);
 
 
 
-
-
-
-  function createCard(initialCards) {
-    const elementTemplate = document.querySelector("#template").content;
-    const element = elementTemplate.querySelector('.element').cloneNode(true);
-    element.querySelector(".element__image").src = initialCards.link;
-    element.querySelector(".element__name").textContent = initialCards.name;
-    return element;
-  }
-
-  const cardsContainer = document.querySelector('.elements');
-  
-
-
-initialCards.forEach((card) => {
-  const cardElement = createCard(card);
-  cardsContainer.prepend(cardElement);
-});
 
 
 
