@@ -59,7 +59,7 @@ openImage.addEventListener("click", showPopupImage);
 closeImage.addEventListener("click", closePopupImage);
 
 
-const initialCards = [
+let initialCards = [
   {
     name: "Valle de Yosemite",
     link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
@@ -104,16 +104,16 @@ const cardsContainer = document.querySelector('.elements');
 });
 
 
-let formImage = document.querySelector("#formImage")
+const formImage = document.forms.register;
+const title = formImage.elements.title;
+const image = formImage.elements.link;
+
 
 function handleImageFormSubmit(evt) {
 evt.preventDefault();
-let titleInput = document.querySelector("#titleImage");
-let imageInput = document.querySelector("#image");
-document.querySelector('.element__name').textContent = titleInput.value;
-document.querySelector(".element__image").src = imageInput.value;
-const card = createCard(titleInput.value, imageInput.value);
-cardsContainer.replaceWith(card);
+createCard(title.value, image.value);
+title.value = "";
+image.value = "";
 closePopupImage();
 };
 formImage.addEventListener('submit', handleImageFormSubmit);
