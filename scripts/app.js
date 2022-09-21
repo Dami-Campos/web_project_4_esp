@@ -104,25 +104,6 @@ const cardsContainer = document.querySelector('.elements');
 });
 
 
-const formImage = document.forms.register;
-const title = formImage.elements.title;
-const image = formImage.elements.link;
-
-
-function handleImageFormSubmit(evt) {
-evt.preventDefault();
-createCard(title.value, image.value);
-title.value = "";
-image.value = "";
-closePopupImage();
-};
-formImage.addEventListener('submit', handleImageFormSubmit);
-
-
-
-
-
-
 const likes = document.querySelectorAll(".element__like");
 const liked = document.querySelectorAll(".element__liked");
 
@@ -169,4 +150,20 @@ openPopup.forEach(image => {
           closePopupp.addEventListener("click", closePopup);
     })
 });
+
+const formImage = document.forms.register_image;
+const title = formImage.elements.title;
+const image = formImage.elements.link;
+
+
+function handleImageFormSubmit(evt) {
+evt.preventDefault();
+const newCard = createCard({name: title.value, link: image.value});
+title.value = "";
+image.value = "";
+cardsContainer.prepend(newCard);
+closePopupImage();
+};
+formImage.addEventListener('submit', handleImageFormSubmit);
+
 
