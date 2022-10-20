@@ -44,7 +44,7 @@ document.addEventListener("keydown", function (evt) {
   }; 
 });
 
-let formProfile = document.querySelector("#form-profile");
+let formProfile = document.querySelector(".form");
 
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
