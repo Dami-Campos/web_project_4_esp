@@ -8,25 +8,33 @@
   <title>Al rededor de los EEUU</title>
 </head>
 <body class="page">
-  <section id="popupProfile" class="popupprofile">
+  <section id="popupProfile" class="popupprofile form__container" >
     <div class="popupprofile__close"><button class="popupprofile__closebutton" type="button" id="closeProfile"><img src="./images/close_icon.png" alt="Cerrar página"></button></div>
     <div class="popupprofile__container">
       <h3 class="popupprofile__header">Editar perfil</h3>
-      <form id="formProfile" class="popupprofile__form" name="register">
-      <input id="nameProfile" class="popupprofile__name" type="text" name="Nombre" placeholder="Nombre">
-      <input id="jobProfile" class="popupprofile__job" type="text" name="Acerca de mi" placeholder="Acerca de mi">
-      <button class="popupprofile__save" type="submit">Guardar</button>
+      <form id="form-profile" class="popupprofile__form form" name="register">
+      <fieldset class="form__set">
+      <input id="form-profile" class="popupprofile__name form__input" type="text" name="name" placeholder="Nombre" minlength="2" maxlength="40" required>
+      <span class="form__error form-profile-error"></span>
+    </fieldset>
+    <fieldset class="form__set">
+      <input id="form-job" class="popupprofile__job form__input" type="text" name="job" placeholder="Acerca de mi" minlength="2" maxlength="40" required>
+      <span class="form__error form-job-error"></span>
+    </fieldset>
+      <button id="button"  class="popupimage__save  form__submit"  type="submit">Guardar</button>
       </form>
       </div> 
   </section>
-  <section id="popupImage" class="popupimage">
+  <section id="popupImage" class="popupimage form__container-image">
     <div class="popupimage__close"><button class="popupimage__closebutton" type="button" id="closeImage"><img src="./images/close_icon.png" alt="Cerrar página"></button></div>
     <div class="popupimage__container">
       <h3 class="popupimage__header">Editar perfil</h3>
-      <form  class="popupimage__form" name="register_image">
-      <input  class="popupimage__name" type="text" name="title" placeholder="Título">
-      <input  class="popupimage__job" type="text" name="link" placeholder="Enlace de la imagen">
-      <button class="popupimage__save" type="submit">Crear</button>
+      <form  class="popupimage__form form" name="register_image">
+      <input id="form-title" class="popupimage__name form__input" type="text" name="title" minlength="2" maxlength="30" required placeholder="Título"> 
+      <span class="form__error form-title-error"></span>
+      <input  id="form-link" class="popupimage__job form__input" type="email" name="link" placeholder="Enlace de la imagen">
+      <span class="form__error form-link-error"></span>
+      <button id="button" class="popupimage__save form__submit" type="submit">Crear</button>
       </form>
       </div> 
   </section>
