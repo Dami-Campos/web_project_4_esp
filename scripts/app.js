@@ -19,14 +19,14 @@ function closePopupProfile() {
     };
   
 
-    document.querySelector('.form__container').addEventListener('click', (event) => {
-      if(event.target === event.target.closest('.form__container')){
+    document.querySelector('.popupprofile__form-container').addEventListener('click', (event) => {
+      if(event.target === event.target.closest('.popupprofile__form-container')){
           closePopupProfile();
       }
     });
     
-    document.querySelector('.form__container-image').addEventListener('click', (event) => {
-      if(event.target === event.target.closest('.form__container-image')){
+    document.querySelector('.popupimage__form-container').addEventListener('click', (event) => {
+      if(event.target === event.target.closest('.popupimage__form-container')){
         closePopupImage();
       }
     });
@@ -225,9 +225,11 @@ const hasInvalidInput = (inputList) => {
 const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
     buttonElement.classList.remove("popupimage__save");
+    buttonElement.classList.remove("popupprofile__save");
     buttonElement.classList.add("button_inactive");
   } else {
     buttonElement.classList.add("popupimage__save");
+    buttonElement.classList.add("popupprofile__save");
     buttonElement.classList.remove("button_inactive");
   }
 };
