@@ -19,14 +19,14 @@ function closePopupProfile() {
     };
   
 
-    document.querySelector('.popupprofile__form-container').addEventListener('click', (event) => {
-      if(event.target === event.target.closest('.popupprofile__form-container')){
+    document.querySelector('.popupprofile__formcontainer').addEventListener('click', (event) => {
+      if(event.target === event.target.closest('.popupprofile__formcontainer')){
           closePopupProfile();
       }
     });
     
-    document.querySelector('.popupimage__form-container').addEventListener('click', (event) => {
-      if(event.target === event.target.closest('.popupimage__form-container')){
+    document.querySelector('.popupimage__formcontainer').addEventListener('click', (event) => {
+      if(event.target === event.target.closest('.popupimage__formcontainer')){
         closePopupImage();
       }
     });
