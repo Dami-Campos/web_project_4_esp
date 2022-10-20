@@ -18,9 +18,18 @@ function closePopupProfile() {
     document.getElementById("popupProfile").style.display = "none";
     };
   
-/*document.addEventListener("click", function (evt) {
-if (evt.target === evt.target.closest(".popupprofile__container")) {
-});*/
+
+    document.querySelector('.form__container').addEventListener('click', (event) => {
+      if(event.target === event.target.closest('.form__container')){
+          closePopupProfile();
+      }
+    });
+    
+    document.querySelector('.form__container-image').addEventListener('click', (event) => {
+      if(event.target === event.target.closest('.form__container-image')){
+        closePopupImage();
+      }
+    });
 
 
 openProfile.addEventListener("click", showPopupProfile); 
