@@ -16,6 +16,7 @@ document.getElementById("popupProfile").style.display = "block";
 
 function closePopupProfile() {
     document.getElementById("popupProfile").style.display = "none";
+    openProfile.removeEventListener("click", showPopupProfile);
     };
   
 
@@ -31,7 +32,6 @@ function closePopupProfile() {
       }
     });
 
-
 openProfile.addEventListener("click", showPopupProfile); 
 closeProfile.addEventListener("click", closePopupProfile);
 
@@ -44,16 +44,16 @@ document.addEventListener("keydown", function (evt) {
   }; 
 });
 
-let formProfile = document.querySelector(".form");
+const formProfile = document.querySelector(".form");
 
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
-    let nameInput = document.querySelector(".popupprofile__name")
-    let jobInput = document.querySelector(".popupprofile__job")
+   const nameInput = document.querySelector(".popupprofile__name")
+  const jobInput = document.querySelector(".popupprofile__job")
     document.querySelector('.profile__name').textContent = nameInput.value;
     document.querySelector(".profile__explorador").textContent = jobInput.value;
     closePopupProfile();
-    formName.reset();
+    formProfile.reset();
 }
 
 formProfile.addEventListener('submit', handleProfileFormSubmit);
@@ -73,6 +73,7 @@ document.querySelector("#form-link");
 
 function showPopupImage() {
 document.getElementById("popupImage").style.display = "block";
+openImage.removeEventListener("click", showPopupImage);
 }
 
 function closePopupImage() {
@@ -84,7 +85,8 @@ openImage.addEventListener("click", showPopupImage);
 closeImage.addEventListener("click", closePopupImage);
 
 
-let initialCards = [
+
+const initialCards = [
   {
     name: "Valle de Yosemite",
     link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
@@ -194,68 +196,3 @@ openPopup.forEach(image => {
 });
 
 
-const showInputError = (formElement, inputElement, errorMessage) => {
-  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-  inputElement.classList.add("form__input_type_error");
-  errorElement.textContent = errorMessage;
-  errorElement.classList.add("form__input-error_active");
-};
-
-const hideInputError = (formElement, inputElement) => {
-  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-  inputElement.classList.remove("form__input_type_error");
-  errorElement.classList.remove("form__input-error_active");
-  errorElement.textContent = "";
-};
-
-const checkInputValidity = (formElement, inputElement) => {
-  if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage);
-  } else {
-    hideInputError(formElement, inputElement);
-  }
-};
-
-const hasInvalidInput = (inputList) => {
-  return inputList.some((inputElement) => {
-    return !inputElement.validity.valid;
-  });
-};
-
-const toggleButtonState = (inputList, buttonElement) => {
-  if (hasInvalidInput(inputList)) {
-    buttonElement.classList.remove("popupimage__save");
-    buttonElement.classList.remove("popupprofile__save");
-    buttonElement.classList.add("button_inactive");
-  } else {
-    buttonElement.classList.add("popupimage__save");
-    buttonElement.classList.add("popupprofile__save");
-    buttonElement.classList.remove("button_inactive");
-  }
-};
-
-
-const setEventListeners = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll(".form__input"));
-  const buttonElement = formElement.querySelector(".form__submit");
-  toggleButtonState(inputList, buttonElement);
-  inputList.forEach((inputElement) => {
-    inputElement.addEventListener("input", function () {
-      checkInputValidity(formElement, inputElement);
-      toggleButtonState(inputList, buttonElement);
-    });
-  });
-};
-
-
- function enableValidation () {
-  const formElement = Array.from(document.querySelectorAll(".form"));
-  formElement.forEach((formElement) => {
-      formElement.addEventListener("submit", (evt) => {
-          evt.preventDefault();
-      });
-      setEventListeners(formElement);
-  });
-};
-
-  enableValidation();
