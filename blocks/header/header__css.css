@@ -1,4 +1,4 @@
-@import url(../header/header.css);
-@import url(../header/header__vector.css);
-@import url(../header/header__line.css);
-@import url(../header/header__another-resolution.css);
+@import url(./header.css);
+@import url(./header__vector.css);
+@import url(./header__line.css);
+@import url(./__another-resolution/header__another-resolution.css);
