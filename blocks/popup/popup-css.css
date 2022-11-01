@@ -1,6 +1,6 @@
-@import url(../popup/popup.css);
-@import url(../popup/popup__close-button.css);
-@import url(../popup/popup__close.css);
-@import url(../popup/popup.css);
-@import url(../popup/popup__size-image.css);
-@import url(../popup/popup__container.css);
+@import url(./popup.css);
+@import url(./popup__close-button.css);
+@import url(./popup__close.css);
+@import url(./popup.css);
+@import url(./popup__size-image.css);
+@import url(./popup__container.css);
