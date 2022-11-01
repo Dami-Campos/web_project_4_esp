@@ -15,14 +15,14 @@ document.getElementById("popupProfile").style.display = "block";
 }
 
 function closePopupProfile() {
-    document.getElementById("popupProfile").style.display = "none";
-    openProfile.removeEventListener("click", showPopupProfile);
+  document.getElementById("popupProfile").style.display = "none";
+  openProfile.removeEventListener("click", showPopupProfile);
     };
   
 
     document.querySelector('.popupprofile-form').addEventListener('click', (event) => {
       if(event.target === event.target.closest('.popupprofile-form')){
-          closePopupProfile();
+        closePopupProfile();
       }
     });
     
@@ -39,8 +39,8 @@ closeProfile.addEventListener("click", closePopupProfile);
 
 document.addEventListener("keydown", function (evt) {
   if (evt.key === "Escape") {
-    closePopupProfile()
-    closePopupImage();
+   closePopupProfile()
+   closePopupImage();
   }; 
 });
 
@@ -48,12 +48,12 @@ const formProfile = document.querySelector(".form");
 
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
-   const nameInput = document.querySelector(".popupprofile__name")
+  const nameInput = document.querySelector(".popupprofile__name")
   const jobInput = document.querySelector(".popupprofile__job")
-    document.querySelector('.profile__name').textContent = nameInput.value;
-    document.querySelector(".profile__explorador").textContent = jobInput.value;
-    closePopupProfile();
-    formProfile.reset();
+   document.querySelector('.profile__name').textContent = nameInput.value;
+   document.querySelector(".profile__explorador").textContent = jobInput.value;
+   closePopupProfile();
+   formProfile.reset();
 }
 
 formProfile.addEventListener('submit', handleProfileFormSubmit);
@@ -165,7 +165,7 @@ const trash = document.querySelectorAll(".element__trash");
 trash.forEach(function(item) {
   item.addEventListener("click", (event) => {
   const listItem = event.target.closest(".element");
-   listItem.remove();
+  listItem.remove();
   } );
  });
 
@@ -176,21 +176,21 @@ const closePopupp = document.querySelector(".popup__close-button");
 const popupElement = document.querySelector(".popup");
 
 openPopup.forEach(image => {
-    image.addEventListener("click", (event) => {
-        const parent = event.target.closest('.element'); 
+  image.addEventListener("click", (event) => {
+    const parent = event.target.closest('.element'); 
        
-          if(parent){
-            const image = parent.querySelector('.element__image');
-            const name = parent.querySelector('.element__name');
-            popupElement.querySelector(".popup__size-image").src = image.src;
-            popupElement.querySelector(".popup__footer").textContent = name.textContent;
-            popupElement.style.display = 'block'; 
+      if(parent){
+        const image = parent.querySelector('.element__image');
+        const name = parent.querySelector('.element__name');
+        popupElement.querySelector(".popup__size-image").src = image.src;
+        popupElement.querySelector(".popup__footer").textContent = name.textContent;
+        popupElement.style.display = 'block'; 
         }
-        function closePopup () {
-          popupElement.style.display= "none"; 
-          }
+      function closePopup () {
+      popupElement.style.display= "none"; 
+       }
           
-          closePopupp.addEventListener("click", closePopup);
+      closePopupp.addEventListener("click", closePopup);
     })
         
 });
