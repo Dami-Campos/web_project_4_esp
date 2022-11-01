@@ -1,9 +1,8 @@
-@import url(../elements/elements.css);
-@import url(../elements/element.css);
-@import url(../elements/element__trash.css);
-@import url(../elements/element__group.css);
-@import url(../elements/element__image.css);
-@import url(../elements/element__like.css);
-@import url(../elements/element__name.css);
-@import url(../elements/elements__another-resolution.css);
-@import url(../elements/element__liked.css);
+@import url(./elements.css);
+@import url(./element__trash.css);
+@import url(./element__group.css);
+@import url(./element__image.css);
+@import url(./element__like.css);
+@import url(./element__name.css);
+@import url(./__another-resolution/element__another-resolution);
+@import url(./element__liked.css);
